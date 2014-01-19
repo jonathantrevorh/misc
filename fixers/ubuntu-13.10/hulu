@@ -1,0 +1,12 @@
+#!/bin/bash -e
+
+#######
+# in order to encrypt the flash player content, hulu requires a hardware abstraction layer
+# this isn't installed by default in 13.10, so we do that, start the hal daemon, and reset the adobe dir in ~/
+#######
+
+sudo apt-get install hal
+sudo mkdir /etc/hal/fdi/preprobe
+sudo mkdir /etc/hal/fdi/information
+/usr/sbin/hald --daemon=yes --verbose=yes
+rm -rf ~/.adobe
