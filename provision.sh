@@ -23,3 +23,10 @@ gsettings set com.canonical.indicator.datetime show-year true
 
 echo "Hide keyboard language indicator"
 gsettings set com.canonical.indicator.keyboard visible false
+
+echo "Hide Templates and Desktop folders"
+sed -i 's/Templates"$/.Templates/' .config/user-dirs.dirs
+mv ~/Templates ~/.Templates
+sed -i 's/Desktop"$/.Desktop/' .config/user-dirs.dirs
+mv ~/Desktop ~/.Desktop
+# consider adding some templates as well
