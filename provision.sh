@@ -4,7 +4,7 @@ echo "Purging extraneous packages"
 sudo apt-get purge unity-webapps-common
 
 echo "Installing basics"
-sudo apt-get install vim git indicator-multiload tree eclipse meld curl nmap agave gimp ubuntu-restricted-extras gconf-editor unity-tweak-tool apache2 php5 php5-mysql php5-memcached php5-imap libapache2-mod-php5 mysql-client mysql-server mailutils qbittorrent nautilus-open-terminal postfix libsasl2-modules inkscape mercurial gnome-tweak-tool ghc
+sudo apt-get install vim git indicator-multiload tree eclipse meld curl nmap agave gimp ubuntu-restricted-extras gconf-editor unity-tweak-tool apache2 php5 php5-mysql php5-memcached php5-imap libapache2-mod-php5 mysql-client mysql-server mailutils qbittorrent nautilus-open-terminal postfix libsasl2-modules inkscape mercurial gnome-tweak-tool ghc xclip htop
 
 echo "Setting Nautilus defaults"
 gsettings set org.gnome.nautilus.preferences default-folder-viewer 'list-view'
